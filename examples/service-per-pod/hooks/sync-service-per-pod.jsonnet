@@ -10,7 +10,7 @@ function(request) {
       kind: "Service",
       metadata: {
         name: statefulset.metadata.name + "-" + index,
-        labels: {app: "service-per-pod"}
+        labels: {app: statefulset.metadata.name + "-service-per-pod"}
       },
       spec: {
         type: "NodePort",
